@@ -3,13 +3,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "subtitle"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -20,31 +13,28 @@
           "settings": {
           }
         },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
+        "8958db3b-22fb-49e4-92e0-37ee74feb638": {
+          "type": "product_informations",
           "settings": {
             "heading": "Features",
-            "icon": "none",
-            "content": "<p>{{ product.metafields.custom.features | metafield_tag }}<\/p>",
-            "page": ""
+            "content": "{{ product.metafields.custom.features.value }}",
+            "show_border": true
           }
         },
-        "3c9005ad-537d-4b30-87a0-e02b8cd25e3d": {
-          "type": "collapsible_tab",
+        "583efe22-d343-4104-98f7-06552ddd1b54": {
+          "type": "product_informations",
           "settings": {
             "heading": "Aroma",
-            "icon": "none",
-            "content": "<p>{{ product.metafields.custom.aroma | metafield_tag }}<\/p>",
-            "page": ""
+            "content": "{{ product.metafields.custom.aroma.value }}",
+            "show_border": true
           }
         },
-        "e164e147-7ad4-4988-9ea7-9eee8021f4aa": {
-          "type": "collapsible_tab",
+        "89a11f32-39c1-4cc9-8d2a-3e901dd5dc1d": {
+          "type": "product_informations",
           "settings": {
             "heading": "Key Ingredients",
-            "icon": "none",
-            "content": "<p>{{ product.metafields.custom.key_ingredients | metafield_tag }}<\/p>",
-            "page": ""
+            "content": "{{ product.metafields.custom.key_ingredients.value }}",
+            "show_border": true
           }
         },
         "variant_picker": {
@@ -60,26 +50,24 @@
             "show_gift_card_recipient": false
           }
         },
-        "52ae2b7e-6c15-42a7-8519-5b6451c6a968": {
-          "type": "collapsible_tab",
+        "5989cd3f-dca0-4290-9d2b-ff0d0f4b7c43": {
+          "type": "product_informations",
           "settings": {
             "heading": "Pay with Afterpay",
-            "icon": "none",
             "content": "<p>Select Afterpay at checkout to pay in four interest-free instalments and enjoy your purchase imminently.<\/p>",
-            "page": ""
+            "show_border": false
           }
         }
       },
       "block_order": [
-        "vendor",
         "title",
         "description",
-        "collapsible-row-0",
-        "3c9005ad-537d-4b30-87a0-e02b8cd25e3d",
-        "e164e147-7ad4-4988-9ea7-9eee8021f4aa",
+        "8958db3b-22fb-49e4-92e0-37ee74feb638",
+        "583efe22-d343-4104-98f7-06552ddd1b54",
+        "89a11f32-39c1-4cc9-8d2a-3e901dd5dc1d",
         "variant_picker",
         "buy_buttons",
-        "52ae2b7e-6c15-42a7-8519-5b6451c6a968"
+        "5989cd3f-dca0-4290-9d2b-ff0d0f4b7c43"
       ],
       "settings": {
         "enable_sticky_info": true,

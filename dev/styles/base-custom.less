@@ -1,3 +1,44 @@
-body{
-    background: green;
+@font-face {
+  font-family: 'KudryashevDisplay';
+  src: local('Kudryashev Display Display'), local('Kudryashev-Display-Display'),
+    url('https://cdn.shopify.com/s/files/1/0848/0047/1359/files/KudryashevDisplay.woff2?v=1703390397') format('woff2'),
+    url('https://cdn.shopify.com/s/files/1/0848/0047/1359/files/KudryashevDisplay.woff?v=1703569858') format('woff'),
+    url('https://cdn.shopify.com/s/files/1/0848/0047/1359/files/KudryashevDisplay.ttf?v=1703569858') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sohne';
+  src: local('Sohne') url('https://cdn.shopify.com/s/files/1/0848/0047/1359/files/Sohne-Leicht.otf?v=1703566103')
+    format('opentype');
+}
+
+  @font-face {
+    font-family: 'Sohne400';
+    src: local('Sohne') url('https://cdn.shopify.com/s/files/1/0848/0047/1359/files/Sohne.otf?v=1703566209')
+      format('opentype');
+  }
+
+:root {
+  --font-body-family: 'Sohne', sans-serif;
+  --font-heading-family: 'Sohne400', sans-serif;
+  --text-color: #333333;
+
+}
+
+body,
+body * {
+  // font-family: 'Sohne', sans-serif;
+  
+}
+
+body {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Sohne400', sans-serif;
+  }
 }
