@@ -7,3 +7,7 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+
+# ignore project files/directories
+node_modules/
