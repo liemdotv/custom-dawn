@@ -54,7 +54,7 @@
           "type": "product_informations",
           "settings": {
             "heading": "Pay with Afterpay",
-            "content": "<p>Select Afterpay at checkout to pay in four interest-free instalments and enjoy your purchase imminently.<\/p>",
+            "content": "Select Afterpay at checkout to pay in four interest-free instalments and enjoy your purchase imminently.",
             "show_border": false
           }
         }
@@ -69,6 +69,9 @@
         "buy_buttons",
         "5989cd3f-dca0-4290-9d2b-ff0d0f4b7c43"
       ],
+      "custom_css": [
+
+      ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "",
@@ -78,7 +81,7 @@
         "gallery_layout": "thumbnail_slider",
         "media_position": "left",
         "image_zoom": "none",
-        "mobile_thumbnails": "hide",
+        "mobile_thumbnails": "show",
         "hide_variants": false,
         "enable_video_looping": false,
         "padding_top": 0,
