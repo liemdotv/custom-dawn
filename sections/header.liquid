@@ -333,20 +333,18 @@
         {%- endcase -%}
       {%- endfor -%}
 
-      <a href="#" class="header__menu-item list-menu__item link focus-inset header__menu-cart-text" id="cart-icon-bubble">
+     <a href="#" class="header__menu-item list-menu__item link focus-inset header__menu-cart-text" id="cart-icon-bubble">
         <span>Cart ({{cart.item_count }})</span>
-      </a>
-
+      </a> 
 
       {% comment %} <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-        {%- liquid
+         {%- liquid
           if cart == empty
             render 'icon-cart-empty'
           else
             render 'icon-cart'
           endif
-        -%}
-
+        -%} 
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
         {%- if cart != empty -%}
           <div class="cart-count-bubble">
@@ -356,7 +354,7 @@
             <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
           </div>
         {%- endif -%}
-      </a> {% endcomment %}
+      </a>  {% endcomment %}
     </div>
   </header>
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
