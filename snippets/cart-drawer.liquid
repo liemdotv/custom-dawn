@@ -67,7 +67,7 @@
             onclick="this.closest('cart-drawer').close()"
             aria-label="{{ 'accessibility.close' | t }}"
           >
-            <span>TAP TO CLOSE THE CART</span>
+            <span class="large-up-hide">TAP TO CLOSE THE CART</span>
             {% render 'icon-close' %}
           </button>
           <h2 class="drawer__heading">{{ 'sections.cart.title' | t }} ({{ cart.item_count }})</h2>
@@ -556,6 +556,8 @@
               {{ 'sections.cart.checkout' | t }}
             </button>
           </div>
+
+          <p class="cart__fee-infomation">Free standard shipping Worldwide with orders over $80.</p>
         </div>
       {% endif %}
     </div>
