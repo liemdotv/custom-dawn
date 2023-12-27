@@ -1,0 +1,50 @@
+.image-with-text {
+  padding: 0 3.2rem 0;
+  .image-with-text__media {
+  }
+
+  .image-with-text__content {
+    padding: 3.2rem 0;
+    .image-with-text__heading {
+      color: #414141;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 2rem;
+      margin-bottom: 1.2rem;
+    }
+    .image-with-text__text {
+      color: #19281f;
+      font-family: 'KudryashevDisplay', sans-serif;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2.8rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .image-with-text {
+    padding: 0;
+    .image-with-text__media {
+        border: 1px solid #000000;
+    }
+    .image-with-text__content {
+        padding: 5.7rem;
+      .image-with-text__heading {
+        color: #000000;
+        margin-bottom: 1.7rem;
+      }
+      .image-with-text__text {
+        font-size: 3.2rem;
+        line-height: 4.4rem;
+      }
+    }
+
+    .image-with-text__grid--reverse{
+        .image-with-text__content{
+            padding-left: 12rem;
+        }
+    }
+  }
+}
