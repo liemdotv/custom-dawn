@@ -226,7 +226,7 @@
                           </td>
 
                           <td class="cart-item__totals right" role="cell" headers="CartDrawer-ColumnTotal">
-                            {%- render 'loading-spinner' -%}
+                            {% comment %} {%- render 'loading-spinner' -%} {% endcomment %}
                             <div class="cart-item__price-wrapper">
                               {%- if item.original_line_price != item.final_line_price -%}
                                 <div class="cart-item__discounted-prices">
@@ -283,6 +283,7 @@
                           >
                             <quantity-popover>
                               <div class="cart-item__quantity-wrapper quantity-popover-wrapper">
+                                {%- render 'loading-spinner' -%}
                                 <div class="quantity-popover-container{% if has_qty_rules or has_vol_pricing %} quantity-popover-container--hover{% endif %}">
                                   <quantity-input class="quantity cart-quantity">
                                     <button class="quantity__button no-js-hidden" name="minus" type="button">

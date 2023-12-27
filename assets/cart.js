@@ -177,7 +177,10 @@ class CartItems extends HTMLElement {
       .catch(() => {
         this.querySelectorAll('.loading__spinner').forEach((overlay) => overlay.classList.add('hidden'));
         const errors = document.getElementById('cart-errors') || document.getElementById('CartDrawer-CartErrors');
-        errors.textContent = window.cartStrings.error;
+
+        if (errors) {
+          errors.textContent = window.cartStrings.error;
+        }
       })
       .finally(() => {
         this.disableLoading(line);
@@ -219,7 +222,10 @@ class CartItems extends HTMLElement {
 
   disableLoading(line) {
     const mainCartItems = document.getElementById('main-cart-items') || document.getElementById('CartDrawer-CartItems');
-    mainCartItems.classList.remove('cart__items--disabled');
+
+    if (!!mainCartItems) {
+      mainCartItems.classList.remove('cart__items--disabled');
+    }
 
     const cartItemElements = this.querySelectorAll(`#CartItem-${line} .loading__spinner`);
     const cartDrawerItemElements = this.querySelectorAll(`#CartDrawer-Item-${line} .loading__spinner`);
