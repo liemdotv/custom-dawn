@@ -182,15 +182,12 @@
   }
 
   .slider-mobile-gutter {
-    width: 86%;
+    width: 84%;
     float: right;
     &.thumbnail-slider {
-      width: 14%;
+      width: 16%;
       float: left;
     }
-
-
-
     .thumbnail-list {
       &.slider {
         flex-direction: column-reverse;
@@ -198,9 +195,23 @@
           width: 100%;
           border: 1px solid var(--text-color);
           border-top: 0;
+          border-right: 0;
         }
       }
+    }
+  }
 
+  .product__media-wrapper {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 16%;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      background-color: var(--text-color);
+      z-index: 1;
     }
   }
 }
