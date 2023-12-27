@@ -293,11 +293,25 @@
           </localization-form>
         {%- endif -%}
       </div>
-      {% render 'header-search', input_id: 'Search-In-Modal' %}
+
+      {% comment %} TODO customize search icon {% endcomment %}
+      <div class="small-hide medium-hide  large-up-hide no-js-hidden"> 
+        {% render 'header-search', input_id: 'Search-In-Modal' %}
+      </div>
+
+      <a href="{{routes.all_products_collection_url}}" class="header__menu-item list-menu__item link link--text focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
+          <span>Shop All</span>
+      </a>
 
       {%- if shop.customer_accounts_enabled -%}
-        <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
-          {% render 'icon-account' %}
+        <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__menu-item list-menu__item link link--text focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
+          {% comment %} {% render 'icon-account' %} {% endcomment %}
+          {%if customer %}
+            <span>Account</span>
+          {% else %}
+            <span>Login</span>
+           {% endif %}
+
           <span class="visually-hidden">
             {%- liquid
               if customer
@@ -317,7 +331,12 @@
         {%- endcase -%}
       {%- endfor -%}
 
-      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+      <a href="#" class="header__menu-item list-menu__item link focus-inset" id="cart-icon-bubble">
+        <span>Cart ({{cart.item_count }})</span>
+      </a>
+
+
+      {% comment %} <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         {%- liquid
           if cart == empty
             render 'icon-cart-empty'
@@ -325,6 +344,7 @@
             render 'icon-cart'
           endif
         -%}
+
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
         {%- if cart != empty -%}
           <div class="cart-count-bubble">
@@ -334,7 +354,7 @@
             <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
           </div>
         {%- endif -%}
-      </a>
+      </a> {% endcomment %}
     </div>
   </header>
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
